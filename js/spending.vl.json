@@ -21,7 +21,7 @@
           {
             "type": "formula",
             "expr": "round(datum.Spending/datum.Population * 10000)",
-            "as": "Military Spending per 10,000 Population"
+            "as": "Spending per 10k Population"
           }
         ]
       },
@@ -84,11 +84,11 @@
             "opacity": {"value": 0.6},
             "fill": {"scale": "color", "field": "Continent"},
             "tooltip": {
-              "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Military Spending($US)\": format(datum[\"Spending\"], \",\"), \"Military Spending per 10,000 Population\": format(datum[\"Military Spending per 10,000 Population\"], \",\")}"
+              "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Military Spending($US)\": format(datum[\"Spending\"], \",\"), \"Spending per 10k Population\": format(datum[\"Spending per 10k Population\"], \",\")}"
             },
             "ariaRoleDescription": {"value": "circle"},
             "description": {
-              "signal": "\"Country Population: \" + (format(datum[\"Population\"], \"\")) + \"; Military Spending($US): \" + (format(datum[\"Spending\"], \"\")) + \"; Continent: \" + (isValid(datum[\"Continent\"]) ? datum[\"Continent\"] : \"\"+datum[\"Continent\"]) + \"; Population: \" + (format(datum[\"Population\"], \".1s\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"]) + \"; Military Spending per 10,000 Population: \" + (format(datum[\"Military Spending per 10,000 Population\"], \",\"))"
+              "signal": "\"Country Population: \" + (format(datum[\"Population\"], \"\")) + \"; Military Spending($US): \" + (format(datum[\"Spending\"], \"\")) + \"; Continent: \" + (isValid(datum[\"Continent\"]) ? datum[\"Continent\"] : \"\"+datum[\"Continent\"]) + \"; Population: \" + (format(datum[\"Population\"], \".1s\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"]) + \"; Spending per 10k Population: \" + (format(datum[\"Spending per 10k Population\"], \",\"))"
             },
             "x": {"scale": "x", "field": "Population"},
             "y": {"scale": "y", "field": "Spending"},
@@ -118,10 +118,10 @@
               {"value": 0}
             ],
             "tooltip": {
-              "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Military Spending($US)\": format(datum[\"Spending\"], \",\"), \"Military Spending per 10,000 Population\": format(datum[\"Military Spending per 10,000 Population\"], \",\")}"
+              "signal": "{\"Country\": isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"], \"Military Spending($US)\": format(datum[\"Spending\"], \",\"), \"Spending per 10k Population\": format(datum[\"Spending per 10k Population\"], \",\")}"
             },
             "description": {
-              "signal": "\"Country Population: \" + (format(datum[\"Population\"], \"\")) + \"; Military Spending($US): \" + (format(datum[\"Spending\"], \"\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"]) + \"; Military Spending per 10,000 Population: \" + (format(datum[\"Military Spending per 10,000 Population\"], \",\"))"
+              "signal": "\"Country Population: \" + (format(datum[\"Population\"], \"\")) + \"; Military Spending($US): \" + (format(datum[\"Spending\"], \"\")) + \"; Country: \" + (isValid(datum[\"Country\"]) ? datum[\"Country\"] : \"\"+datum[\"Country\"]) + \"; Spending per 10k Population: \" + (format(datum[\"Spending per 10k Population\"], \",\"))"
             },
             "x": {"scale": "x", "field": "Population"},
             "y": {"scale": "y", "field": "Spending"},
